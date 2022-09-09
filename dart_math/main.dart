@@ -6,6 +6,7 @@ import "points.dart";
 import "sqrt.dart";
 import 'string_extraction.dart';
 import 'user.dart';
+import 'integral.dart';
 
 void main() {
   print("Реализуйте методы вычисления НОД и НОК целых чисел. Реализуйте метод, который разбивает число на простые множители и возвращает их.");
@@ -51,4 +52,6 @@ void main() {
   manager.removeUsers([u1,u2]);
   print("Manager sees emails after removal: ${manager.managedUsersEmails.join(", ")}");
 
+
+  print("Integral: ${integral(1, 20, sin, 100)}");
 }
