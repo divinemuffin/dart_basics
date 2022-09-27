@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyMainRightDrawer extends Drawer {
+class MainRightDrawer extends Drawer {
   final GlobalKey<ScaffoldState> _scaffoldKey;
 
   @override
@@ -30,5 +30,5 @@ class MyMainRightDrawer extends Drawer {
     );
   }
 
-  MyMainRightDrawer(this._scaffoldKey);
+  MainRightDrawer(this._scaffoldKey);
 }

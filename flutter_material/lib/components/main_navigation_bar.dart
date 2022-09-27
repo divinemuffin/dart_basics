@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyMainNavBar extends BottomAppBar {
+class MainNavBar extends BottomAppBar {
   Widget build(BuildContext context) {
     return BottomAppBar(
       shape: CircularNotchedRectangle(),
@@ -20,5 +20,5 @@ class MyMainNavBar extends BottomAppBar {
     );
   }
 
-  MyMainNavBar();
+  MainNavBar();
 }

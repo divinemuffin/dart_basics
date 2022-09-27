@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyMainBottomSheet {
+class MainBottomSheet {
   static PersistentBottomSheetController _controller;
   GlobalKey<ScaffoldState> _scaffoldKey;
 
@@ -42,5 +42,5 @@ class MyMainBottomSheet {
     }
   }
 
-  MyMainBottomSheet(this._scaffoldKey);
+  MainBottomSheet(this._scaffoldKey);
 }
