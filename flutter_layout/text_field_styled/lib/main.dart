@@ -25,21 +25,49 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+// https://medium.com/flutter-community/a-visual-guide-to-input-decorations-for-flutter-textfield-706cf1877e25
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Text field styled'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextField(),
-          ],
-        ),
-      ),
-    );
+        appBar: AppBar(title: Text("Text field styled")),
+        body: Theme(
+            data: Theme.of(context).copyWith(
+              primaryColor: Colors.purple,
+            ),
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              child: TextField(
+                // autofocus: true,
+                textInputAction: TextInputAction.search,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide(
+                      color: Colors.purple,
+                      width: 1.0,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide(
+                      color: Colors.purple,
+                      width: 2.0,
+                    ),
+                  ),
+                  helperText: "Hint: use fingers to type",
+                  labelText: "Search",
+                  labelStyle: TextStyle(color: Colors.purple),
+                  suffixIcon: Icon(
+                    Icons.search,
+                    color: Colors.purple,
+                  ),
+                  suffixIconColor: Colors.purple,
+                  isCollapsed: false,
+                  hintText: 'Type here ....',
+                ),
+              ),
+            )));
   }
 }
