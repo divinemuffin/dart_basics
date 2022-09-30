@@ -131,10 +131,10 @@
       "name": "text_field_styled",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-09-29T15:22:51.459900Z",
+  "generated": "2022-09-30T17:08:31.901231Z",
   "generator": "pub",
   "generatorVersion": "2.18.1"
 }

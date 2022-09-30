@@ -131,10 +131,10 @@
       "name": "sliver_widgets",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-09-29T15:22:48.742013Z",
+  "generated": "2022-09-30T17:07:49.272621Z",
   "generator": "pub",
   "generatorVersion": "2.18.1"
 }

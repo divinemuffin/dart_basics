@@ -131,10 +131,10 @@
       "name": "horizontal_list",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-09-29T15:22:43.163731Z",
+  "generated": "2022-09-30T17:08:04.332026Z",
   "generator": "pub",
   "generatorVersion": "2.18.1"
 }
