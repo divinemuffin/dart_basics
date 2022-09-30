@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "aab6e5576a25f1a85ee6d48941e5123a66203947b73595e9538d2fa4228b5fef"
+build_start_time: [1664466649, 58449029]
+build_end_time: [1664466659, 69043159]
+inputs:
+  "/Users/andrew_m/Projects/flutter_test_project/flutter_layout/list_view_divider/macos/Flutter/GeneratedPluginRegistrant.swift": [1664466632, 34623622]
+  "/Users/andrew_m/Projects/flutter_test_project/flutter_layout/list_view_divider/macos/Runner/AppDelegate.swift": [1657744753, 0]
+  "/Users/andrew_m/Projects/flutter_test_project/flutter_layout/list_view_divider/macos/Runner/MainFlutterWindow.swift": [1657744753, 0]
