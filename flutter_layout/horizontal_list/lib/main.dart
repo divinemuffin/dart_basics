@@ -26,24 +26,30 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var listData = List.generate(50, (index) => index);
+  var listData = List.generate(10, (index) => index);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Horizontal list'),
-        ),
-        body: ListView(
+      appBar: AppBar(
+        title: Text('Horizontal list ${MediaQuery.of(context).size.width} ${MediaQuery.of(context).orientation}'),
+      ),
+      body: Container(
+        height: MediaQuery.of(context).size.width < 500 ? 100 : MediaQuery.of(context).size.height,
+        child: ListView(
           scrollDirection: MediaQuery.of(context).size.width < 500 ? Axis.horizontal : Axis.vertical,
           children: listData
-              .map((e) => Container(
-                    width: 200,
-                    height: 200,
-                    color: Color.fromRGBO(0, (255 - e * (255 ~/ listData.length)), 0, 1),
-                    margin: EdgeInsets.all(5),
-                  ))
+              .map(
+                (e) => Container(
+                  width: 100,
+                  height: 100,
+                  color: Color.fromRGBO(0, (255 - e * (255 ~/ listData.length)), 0, ((255 - 50) - e * ((255 - 50) ~/ listData.length)).toDouble()),
+                  margin: EdgeInsets.all(5),
+                ),
+              )
               .toList(),
-        ));
+        ),
+      ),
+    );
   }
 }

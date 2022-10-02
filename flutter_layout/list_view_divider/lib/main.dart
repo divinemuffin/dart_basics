@@ -32,27 +32,24 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(
-          children: listData
-              .map(
-                (e) => Column(children: [
-                  ListTile(
-                    leading: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          (e + 1).toString(),
-                        )
-                      ],
-                    ),
-                    title: Text("Item"),
-                    trailing: Icon(Icons.chevron_right),
-                    subtitle: Text("Sub"),
-                  ),
-                  Divider(color: Colors.black45, endIndent: 16, indent: 16)
-                ]),
-              )
-              .toList(),
+        child: ListView.separated(
+          itemCount: listData.length,
+          separatorBuilder: (BuildContext context, int index) => const Divider(),
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    (index + 1).toString(),
+                  )
+                ],
+              ),
+              title: Text("Item"),
+              trailing: Icon(Icons.chevron_right),
+              subtitle: Text("Sub"),
+            );
+          },
         ),
       ),
     );
