@@ -34,21 +34,26 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Horizontal list ${MediaQuery.of(context).size.width} ${MediaQuery.of(context).orientation}'),
       ),
-      body: Container(
-        height: MediaQuery.of(context).size.width < 500 ? 100 : MediaQuery.of(context).size.height,
-        child: ListView(
-          scrollDirection: MediaQuery.of(context).size.width < 500 ? Axis.horizontal : Axis.vertical,
-          children: listData
-              .map(
-                (e) => Container(
-                  width: 100,
-                  height: 100,
-                  color: Color.fromRGBO(0, (255 - e * (255 ~/ listData.length)), 0, ((255 - 50) - e * ((255 - 50) ~/ listData.length)).toDouble()),
-                  margin: EdgeInsets.all(5),
-                ),
-              )
-              .toList(),
-        ),
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+          return Container(
+            height: constraints.maxWidth < 500 ? 100 : MediaQuery.of(context).size.height,
+            child: ListView(
+              scrollDirection: constraints.maxWidth < 500 ? Axis.horizontal : Axis.vertical,
+              children: listData
+                  .map(
+                    (e) => Container(
+                      width: 100,
+                      height: 100,
+                      color:
+                          Color.fromRGBO(0, (255 - e * (255 ~/ listData.length)), 0, ((255 - 50) - e * ((255 - 50) ~/ listData.length)).toDouble()),
+                      margin: EdgeInsets.all(5),
+                    ),
+                  )
+                  .toList(),
+            ),
+          );
+        },
       ),
     );
   }
