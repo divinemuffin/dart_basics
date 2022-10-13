@@ -1,6 +1,6 @@
-import 'package:albums_route/pages/artist.dart';
-import 'package:albums_route/pages/artists_list.dart';
-import 'package:albums_route/pages/home.dart';
+import 'package:albums_route/pages/artist_page.dart';
+import 'package:albums_route/pages/artists_list_page.dart';
+import 'package:albums_route/pages/home_page.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 
@@ -25,8 +25,8 @@ class AppRouter {
   );
 
   static void setupRouter() {
-    router.define("/home", handler: HomeHandler, transitionType: TransitionType.material);
+    router.define("/home", handler: HomeHandler, transitionType: TransitionType.inFromBottom);
     router.define("/artists", handler: ArtistsListHandler, transitionType: TransitionType.cupertino);
-    router.define("/artists/:id", handler: ArtistsListHandler, transitionType: TransitionType.inFromRight);
+    router.define("/artists/:id", handler: ArtistsListHandler, transitionType: TransitionType.inFromBottom);
   }
 }
