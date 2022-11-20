@@ -11,7 +11,7 @@ class ArtistsListPage extends StatefulWidget {
 }
 
 class _ArtistsListPageState extends State {
-  Future<String> _artistsFuture = fetchFileFromAssets("./assets/artists.json");
+  Future<String> _artistsFuture = fetchFile("./assets/artists.json");
 
   List<Widget> parseAndBuildList(String jsonData) {
     final List parsedList = jsonDecode(jsonData);

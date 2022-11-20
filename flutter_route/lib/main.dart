@@ -1,5 +1,5 @@
 import 'package:albums_route/pages/not_found_page.dart';
-import 'package:albums_route/routes.dart';
+import 'package:albums_route/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -64,14 +64,17 @@ class NavigationDrawer extends StatelessWidget {
                 leading: Icon(Icons.home),
                 title: Text("Home"),
                 trailing: Icon(Icons.chevron_right),
+                selected: ModalRoute.of(context)?.settings.name == "/home",
                 onTap: () {
                   print("Navigating home");
+                  print(ModalRoute.of(context)?.settings.name);
                   Navigator.of(context).pushNamed("/home");
                 }),
             ListTile(
               leading: Icon(Icons.people),
               title: Text("Artists"),
               trailing: Icon(Icons.chevron_right),
+              selected: ModalRoute.of(context)?.settings.name == "/artists",
               onTap: () => Navigator.of(context).pushNamed("/artists"),
             ),
           ],
